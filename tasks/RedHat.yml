@@ -3,6 +3,18 @@
   yum:
     state: present
     validate_certs: no
+    disable_gpg_check: yes
+    name:
+    - openldap
+    - openldap-servers
+    - openldap-clients
+    - python-ldap
+  when: ansible_distribution_major_version < '8'
+
+- name: Install required packages
+  yum:
+    state: present
+    validate_certs: no
     enablerepo: powertools
     disable_gpg_check: yes
     name:
@@ -10,3 +22,4 @@
     - openldap-servers
     - openldap-clients
     - python3-ldap
+  when: ansible_distribution_major_version == '8'
