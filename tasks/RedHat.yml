@@ -9,4 +9,4 @@
     - openldap
     - openldap-servers
     - openldap-clients
-    - python-ldap
+    - python3-ldap
