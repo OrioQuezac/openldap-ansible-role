@@ -3,10 +3,10 @@
   yum:
     state: present
     validate_certs: no
+    enablerepo: powertools
     disable_gpg_check: yes
     name:
     - openldap
     - openldap-servers
     - openldap-clients
     - python-ldap
-
