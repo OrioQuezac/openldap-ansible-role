@@ -1,4 +1,4 @@
 ---
-dbtype: "{2}mdb"
+dbtype: "{% if ansible_distribution_major_version == '8' %}{2}mdb{% else %}{2}hdb{% endif %}"
 dbconfig_path: /usr/share/openldap-servers/DB_CONFIG.example
 schema_path: /etc/openldap/schema
